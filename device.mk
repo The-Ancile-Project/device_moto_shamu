@@ -325,7 +325,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 
 PRODUCT_PROPERTY_OVERRIDES += \
-   dalvik.vm.heapgrowthlimit=256m
+   dalvik.vm.heapgrowthlimit=256m \
+   persist.data.iwlan.enable=true \
+   persist.radio.ignore_ims_wlan=1 \
+   persist.radio.data_con_rprt=1
 
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
