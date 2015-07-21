@@ -20,6 +20,7 @@ type_transition sensors socket_device:sock_file sensors_socket "sensor_ctl_socke
 allow sensors sensors_socket:sock_file create_file_perms;
 allow sensors socket_device:dir { add_name write remove_name };
 
+allow sensors self:capability net_raw;
 # Wake lock access
 wakelock_use(sensors)
 
